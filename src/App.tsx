@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { getImages } from "./apis/getImages";
+import ImgGrid from "./components/ImgGrid/ImgGrid";
 
 function App() {
-  useEffect(() => {
-    getImages();
-  }, []);
   return (
     <div className="App">
       <header className="App-header">
@@ -14,6 +10,7 @@ function App() {
         <h1>Bruno Morales' Coding Challenge</h1>
         <p className="App-link">Frontend - Image gallery with filters</p>
       </header>
+      <ImgGrid />
       <div>
         <h2>Instructions:</h2>
         <p>Implement a simple web app that allows browsing the Imgur gallery</p>

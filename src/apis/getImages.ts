@@ -1,4 +1,5 @@
 import CONSTANTS from "./constants";
+import { imgurResponseInterface, imgurGallery } from "../types";
 
 const options = {
   headers: {
@@ -6,12 +7,16 @@ const options = {
   },
 };
 
-export const getImages = (section = CONSTANTS.SECTIONS.TOP, sort = CONSTANTS.SORT_OPTIONS.VIRAL, window = "", page = 0) => {
-  const requestUrl = `${CONSTANTS.BASE_IMGUR_URL}/${section}/${sort}/${page}`;
-  console.log(requestUrl);
-  fetch(requestUrl, options)
+export const getImages = (section = CONSTANTS.SECTIONS.TOP, sort = CONSTANTS.SORT_OPTIONS.VIRAL, window = "day", page = 0, showViral = true, nsfw = false) => {
+  const requestUrl = `${CONSTANTS.BASE_IMGUR_URL}/${section}/${sort}/${window}/${page}?showViral=${showViral}&mature=${nsfw}`;
+  return fetch(requestUrl, options)
     .then((res) => res.json())
-    .then((res) => {
-      console.log("res", res);
+    .then((res: imgurResponseInterface): imgurGallery[] => {
+      const imgurGalleries = res.data;
+      const imgurImages = imgurGalleries.map((gallery) => ({
+        ...gallery,
+        link: gallery.images?.[0]?.link ?? "",
+      }));
+      return imgurImages;
     });
 };
