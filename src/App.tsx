@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { getImages } from "./apis/getImages";
 
 function App() {
+  useEffect(() => {
+    getImages();
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
@@ -11,7 +15,7 @@ function App() {
         <p className="App-link">Frontend - Image gallery with filters</p>
       </header>
       <div>
-        <h2>Instructions;</h2>
+        <h2>Instructions:</h2>
         <p>Implement a simple web app that allows browsing the Imgur gallery</p>
         <ul>
           <li>consume the Imgur API: https://api.imgur.com/ (check documentation for the api https://apidocs.imgur.com)</li>
