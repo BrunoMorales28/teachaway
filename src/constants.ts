@@ -11,6 +11,7 @@ const CONSTANTS = {
     TOP: "top",
     TIME: "time",
   },
+  DEFAULT_IMG: "https://s.imgur.com/images/404/giraffeweyes.png",
 };
 
 export default CONSTANTS;

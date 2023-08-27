@@ -1,31 +1,20 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Container from "@mui/material/Container/Container";
 import ImgGrid from "./components/ImgGrid/ImgGrid";
+import InstructionsSection from "./components/InstructionsSection/InstructionsSection";
+import Typography from "@mui/material/Typography/Typography";
+import Box from "@mui/material/Box/Box";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Bruno Morales' Coding Challenge</h1>
-        <p className="App-link">Frontend - Image gallery with filters</p>
-      </header>
+    <Container sx={{ minHeight: "100vh", bgcolor: "#282c34", color: "white" }}>
+      <Box height="100vh" display="flex" flexDirection="column" justifyContent="space-around">
+        <img src="https://www.teachaway.com/themes/contrib/tams/logo.svg" alt="logo" />
+        <Typography align="center">Bruno Morales' Coding Challenge</Typography>
+        <Typography align="center">Frontend - Image gallery with filters</Typography>
+      </Box>
       <ImgGrid />
-      <div>
-        <h2>Instructions:</h2>
-        <p>Implement a simple web app that allows browsing the Imgur gallery</p>
-        <ul>
-          <li>consume the Imgur API: https://api.imgur.com/ (check documentation for the api https://apidocs.imgur.com)</li>
-          <li>show gallery images in a grid of thumbnails;</li>
-          <li>show image description in the thumbnail, top or bottom;</li>
-          <li>allow selecting the gallery section: hot, top, user;</li>
-          <li>allow including / excluding viralimages from the result set;</li>
-          <li>allow specifying window and sort parameters;</li>
-          <li>when clicking an image in the gallery - show its details: big image, title, description, upvotes, downvotes and score.</li>
-          <li>pagination is a plus</li>
-        </ul>
-      </div>
-    </div>
+      <InstructionsSection />
+    </Container>
   );
 }
 

@@ -1,4 +1,4 @@
-import CONSTANTS from "./constants";
+import CONSTANTS from "../constants";
 import { imgurResponseInterface, imgurGallery } from "../types";
 
 const options = {
@@ -8,7 +8,7 @@ const options = {
 };
 
 export const getImages = (section = CONSTANTS.SECTIONS.TOP, sort = CONSTANTS.SORT_OPTIONS.VIRAL, window = "day", page = 0, showViral = true, nsfw = false) => {
-  const requestUrl = `${CONSTANTS.BASE_IMGUR_URL}/${section}/${sort}/${window}/${page}?showViral=${showViral}&mature=${nsfw}`;
+  const requestUrl = `${CONSTANTS.BASE_IMGUR_URL}/gallery/${section}/${sort}/${window}/${page}?showViral=${showViral}&mature=${nsfw}`;
   return fetch(requestUrl, options)
     .then((res) => res.json())
     .then((res: imgurResponseInterface): imgurGallery[] => {
