@@ -3,6 +3,7 @@ import ImgGrid from "./components/ImgGrid/ImgGrid";
 import InstructionsSection from "./components/InstructionsSection/InstructionsSection";
 import Typography from "@mui/material/Typography/Typography";
 import Box from "@mui/material/Box/Box";
+import GalleryPanel from "./components/GalleryPanel/GalleryPanel";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Typography align="center">Bruno Morales' Coding Challenge</Typography>
         <Typography align="center">Frontend - Image gallery with filters</Typography>
       </Box>
+      <GalleryPanel />
       <ImgGrid />
       <InstructionsSection />
     </Container>

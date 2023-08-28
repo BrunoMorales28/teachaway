@@ -12,8 +12,8 @@ const ImgGrid = () => {
   return (
     <ImageList sx={{ bgcolor: "#282c34", p: 1 }} cols={1} gap={8}>
       {images.map((img: imgurGallery) => (
-        <Card sx={{ bgcolor: "#424855" }}>
-          <ImgThumbnail key={img.id} link={img.link} title={img.title} description={img.description} />
+        <Card key={img.id} sx={{ bgcolor: "#424855" }}>
+          <ImgThumbnail link={img.link} title={img.title} description={img.description} />
         </Card>
       ))}
     </ImageList>
