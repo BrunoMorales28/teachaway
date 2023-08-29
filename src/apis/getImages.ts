@@ -7,9 +7,9 @@ const options = {
   },
 };
 
-export const getImages = (section = CONSTANTS.SECTIONS.TOP, sort = CONSTANTS.SORT_OPTIONS.VIRAL, window = "day", page = 0, showViral = true, nsfw = false) => {
+export const getImages = (section = CONSTANTS.SECTIONS.TOP, showViral = true, sort = CONSTANTS.SORT_OPTIONS.VIRAL, window = "day", page = 0, nsfw = false) => {
   const requestUrl = `${CONSTANTS.BASE_IMGUR_URL}/gallery/${section}/${sort}/${window}/${page}?showViral=${showViral}&mature=${nsfw}`;
-  console.log("ha", section);
+
   return fetch(requestUrl, options)
     .then((res) => res.json())
     .then((res: imgurResponseInterface): imgurGallery[] => {
