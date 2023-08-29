@@ -1,6 +1,6 @@
-import actions from "./components/SectionPanel/actions";
-import CONSTANTS from "./constants";
-import { reduxState } from "./types";
+import actions from "../components/SectionPanel/actions";
+import CONSTANTS from "../constants";
+import { reduxState } from "../types";
 
 const initialState = {
   currentSection: CONSTANTS.SECTIONS.HOT,

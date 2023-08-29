@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { Box, Button, ButtonGroup, Typography } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { Box, Button, ButtonGroup, Switch, Typography } from "@mui/material";
 
 import CONSTANTS from "../../constants";
 import actions from "./actions";
+import { selectSection } from "../../redux/selectors";
 
 type gallerySection = "hot" | "top" | "user";
 
@@ -21,11 +22,11 @@ const PanelButton = ({ sectionName, currentSection, handleClick }: panelButtonPr
 
 const SectionPanel = () => {
   const { TOP, HOT, USER } = CONSTANTS.SECTIONS as { TOP: gallerySection; HOT: gallerySection; USER: gallerySection };
-  const [currentSection, setCurrentSection] = useState<gallerySection>(HOT);
+  const currentSection = useSelector(selectSection) as gallerySection;
   const dispatch = useDispatch();
+
   const handleClick = (value: gallerySection) => {
     dispatch({ type: actions.setCurrentSection, payload: value });
-    setCurrentSection(value);
   };
 
   return (
