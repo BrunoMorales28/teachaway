@@ -4,16 +4,18 @@ import { Card, ImageList } from "@mui/material";
 
 import { getImages } from "../../apis/getImages";
 import ImgThumbnail from "../ImgThumbnail";
-import { imgurGallery, reduxState } from "../../types";
-
-const selectSection = (state: reduxState) => state.currentSection;
+import { imgurGallery } from "../../types";
+import { selectSection, selectShowViral } from "../../redux/selectors";
 
 const ImgGrid = () => {
   const [images, setImages] = useState<imgurGallery[]>([]);
   const currentSection = useSelector(selectSection);
+  const showViral = useSelector(selectShowViral);
+
   useEffect(() => {
-    getImages(currentSection).then((imgs) => setImages(imgs));
-  }, [currentSection]);
+    getImages(currentSection, showViral).then((imgs) => setImages(imgs));
+  }, [currentSection, showViral]);
+
   return (
     <ImageList sx={{ bgcolor: "#282c34", p: 1 }} cols={1} gap={8}>
       {images.map((img: imgurGallery) => (

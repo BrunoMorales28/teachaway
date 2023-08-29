@@ -21,4 +21,5 @@ export type imgurGallery = {
 
 export interface reduxState {
   currentSection: string;
+  showViral: boolean;
 }

@@ -3,7 +3,7 @@ import Container from "@mui/material/Container/Container";
 import Typography from "@mui/material/Typography/Typography";
 import Box from "@mui/material/Box/Box";
 
-import store from "./reduxStore";
+import store from "./redux/reduxStore";
 import ImgGrid from "./components/ImgGrid";
 import InstructionsSection from "./components/InstructionsSection";
 import SectionPanel from "./components/SectionPanel";
