@@ -1,7 +1,8 @@
 import ImageListItem from "@mui/material/ImageListItem/ImageListItem";
 import Typography from "@mui/material/Typography/Typography";
 import Box from "@mui/material/Box";
-import CONSTANTS from "../constants";
+
+import CONSTANTS from "../../constants";
 
 interface thumbnailProps {
   link: string;

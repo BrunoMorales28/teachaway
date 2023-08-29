@@ -1,8 +1,8 @@
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Box, Button, ButtonGroup } from "@mui/material";
 
-import { useDispatch } from "react-redux";
 import CONSTANTS from "../../constants";
-import { useState } from "react";
 import actions from "./actions";
 
 type gallerySection = "hot" | "top" | "user";
@@ -19,7 +19,7 @@ const PanelButton = ({ sectionName, currentSection, handleClick }: panelButtonPr
   </Button>
 );
 
-const GalleryPanel = () => {
+const SectionPanel = () => {
   const { TOP, HOT, USER } = CONSTANTS.SECTIONS as { TOP: gallerySection; HOT: gallerySection; USER: gallerySection };
   const [currentSection, setCurrentSection] = useState<gallerySection>(HOT);
   const dispatch = useDispatch();
@@ -39,4 +39,4 @@ const GalleryPanel = () => {
   );
 };
 
-export default GalleryPanel;
+export default SectionPanel;

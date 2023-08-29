@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { Card, ImageList } from "@mui/material";
+
 import { getImages } from "../../apis/getImages";
 import ImgThumbnail from "../ImgThumbnail";
 import { imgurGallery } from "../../types";
-import { Card, ImageList } from "@mui/material";
-import { useSelector } from "react-redux";
 
 const selectSection = (state: any) => state.currentSection;
 

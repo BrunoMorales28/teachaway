@@ -1,4 +1,4 @@
-import actions from "./components/GalleryPanel/actions";
+import actions from "./components/SectionPanel/actions";
 import CONSTANTS from "./constants";
 
 const initialState = {

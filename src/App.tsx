@@ -1,12 +1,13 @@
-import Container from "@mui/material/Container/Container";
-import ImgGrid from "./components/ImgGrid/ImgGrid";
-import InstructionsSection from "./components/InstructionsSection/InstructionsSection";
-import Typography from "@mui/material/Typography/Typography";
-import Box from "@mui/material/Box/Box";
-import GalleryPanel from "./components/GalleryPanel/GalleryPanel";
-import appReducer from "./appReducer";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
+import Container from "@mui/material/Container/Container";
+import Typography from "@mui/material/Typography/Typography";
+import Box from "@mui/material/Box/Box";
+
+import appReducer from "./appReducer";
+import ImgGrid from "./components/ImgGrid";
+import InstructionsSection from "./components/InstructionsSection";
+import SectionPanel from "./components/SectionPanel";
 
 const store = configureStore({
   reducer: appReducer,
@@ -21,7 +22,7 @@ function App() {
           <Typography align="center">Bruno Morales' Coding Challenge</Typography>
           <Typography align="center">Frontend - Image gallery with filters</Typography>
         </Box>
-        <GalleryPanel />
+        <SectionPanel />
         <ImgGrid />
         <InstructionsSection />
       </Container>
