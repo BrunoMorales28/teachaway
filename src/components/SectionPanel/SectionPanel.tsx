@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Box, Button, ButtonGroup } from "@mui/material";
+import { Box, Button, ButtonGroup, Typography } from "@mui/material";
 
 import CONSTANTS from "../../constants";
 import actions from "./actions";
@@ -14,8 +14,8 @@ interface panelButtonProps {
 }
 
 const PanelButton = ({ sectionName, currentSection, handleClick }: panelButtonProps) => (
-  <Button disabled={sectionName === currentSection} onClick={() => handleClick(sectionName)}>
-    {sectionName}
+  <Button sx={{ bgcolor: "#424855", borderColor: "#000000" }} disabled={sectionName === currentSection} onClick={() => handleClick(sectionName)}>
+    <Typography color="white"> {sectionName} </Typography>
   </Button>
 );
 
@@ -30,7 +30,7 @@ const SectionPanel = () => {
 
   return (
     <Box display="flex" justifyContent="center">
-      <ButtonGroup variant="contained" size="small">
+      <ButtonGroup variant="contained">
         <PanelButton currentSection={currentSection} sectionName={HOT} handleClick={handleClick} />
         <PanelButton currentSection={currentSection} sectionName={TOP} handleClick={handleClick} />
         <PanelButton currentSection={currentSection} sectionName={USER} handleClick={handleClick} />
