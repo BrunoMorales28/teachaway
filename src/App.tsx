@@ -1,17 +1,12 @@
 import { Provider } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
 import Container from "@mui/material/Container/Container";
 import Typography from "@mui/material/Typography/Typography";
 import Box from "@mui/material/Box/Box";
 
-import appReducer from "./appReducer";
+import store from "./reduxStore";
 import ImgGrid from "./components/ImgGrid";
 import InstructionsSection from "./components/InstructionsSection";
 import SectionPanel from "./components/SectionPanel";
-
-const store = configureStore({
-  reducer: appReducer,
-});
 
 function App() {
   return (

@@ -4,9 +4,9 @@ import { Card, ImageList } from "@mui/material";
 
 import { getImages } from "../../apis/getImages";
 import ImgThumbnail from "../ImgThumbnail";
-import { imgurGallery } from "../../types";
+import { imgurGallery, reduxState } from "../../types";
 
-const selectSection = (state: any) => state.currentSection;
+const selectSection = (state: reduxState) => state.currentSection;
 
 const ImgGrid = () => {
   const [images, setImages] = useState<imgurGallery[]>([]);

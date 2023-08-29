@@ -18,3 +18,7 @@ export type imgurGallery = {
   ];
   link: string;
 };
+
+export interface reduxState {
+  currentSection: string;
+}
