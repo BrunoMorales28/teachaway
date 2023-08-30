@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Teachaway
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bruno Morales' Tech challenge for teachaway's Front End position
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To start the project after cloning the repo, open a terminal window and run
 
-### `npm start`
+### `npm run install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Once dependencies were downloaded, run
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm run start`
 
-### `npm test`
+This should host the app and run it directly in your default browser, connecting to localhost:3000.
+Close or ignore this tab. Instead, go to 127.0.0.1:3000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app should now be running properly.
 
-### `npm run build`
+This is because localhost is not a valid address for imgur server when it recieves a request.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## The App
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This app was requested by Teachaway to assess my skill level using ReactJs with Redux. It was built using a mobile first approach.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+It consists of a screen which, when scrolled down, displays a list of images requested to the imgur API. There is a button to toggle visibility for viral images, and a small control panel to filter the search depending on the section - "Hot", "Top" or "User".
 
-### `npm run eject`
+The full list of requirements as requested by Teachaway are the following:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+● Use React/Redux (preferably), Vue.js or other similar js frameworks.
+● Styling: sass, styled-components, css modules (your choice).
+● Code linter.
+● Typescript is a plus.
+● Implementing unit tests is a plus: Jest + react-testing-library / enzyme.
+● Hosting the website on the service of your choice is a plus.
+● consume the Imgur API: https://api.imgur.com/ (check documentation for the api https://apidocs.imgur.com)
+● show gallery images in a grid of thumbnails;
+● show image description in the thumbnail, top or bottom;
+● allow selecting the gallery section: hot, top, user;
+● allow including / excluding viralimages from the result set;
+● allow specifying window and sort parameters;
+● when clicking an image in the gallery - show its details: big image, title, description, upvotes, downvotes and score.
+● pagination is a plus
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Main Issue
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The toughest challenge I face during the creation of this app was imgur's server configuration, which is restricted by CORS in a way which I found hard to diagnose and which required a workaround (For example, not being able to connect through localhost)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Personal notes:
 
-## Learn More
+● Although instructions specify sass, styled-components and css modules, it was mentioned during the interview Teachaway uses Material UI for the code. Thus, I included Material UI to the stack.
+● Regrettably, during this week I did not find myself with as much time to work on this challenge as I hoped, and I was not able to include pagination; unit testing (with Enzyme and Jest) and routing (With React-router). These are important tasks I know how to code, but will not be displayed in this demo.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Again, I want to thank you for your interest and the opportunity, and hope to work together soon!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bruno Morales
