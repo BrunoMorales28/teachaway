@@ -18,7 +18,7 @@ const InstructionsSection = () => (
         show image description in the thumbnail, top or bottom;
       </ListItem>
       <ListItem>
-        <Checkbox checked={false} />
+        <Checkbox checked />
         allow selecting the gallery section: hot, top, user;
       </ListItem>
       <ListItem>
