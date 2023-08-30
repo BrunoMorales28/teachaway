@@ -22,7 +22,7 @@ const InstructionsSection = () => (
         allow selecting the gallery section: hot, top, user;
       </ListItem>
       <ListItem>
-        <Checkbox checked={false} />
+        <Checkbox checked />
         allow including / excluding viralimages from the result set;
       </ListItem>
       <ListItem>
