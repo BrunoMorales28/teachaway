@@ -42,7 +42,7 @@ The full list of requirements as requested by Teachaway are the following: <br/>
 ● when clicking an image in the gallery - show its details: big image, title, description, upvotes, downvotes and score. <br/>
 ● pagination is a plus <br/>
 
-## Main Issue
+### Main Issue
 
 The toughest challenge I face during the creation of this app was imgur's server configuration, which is restricted by CORS in a way which I found hard to diagnose and which required a workaround (For example, not being able to connect through localhost)
 
