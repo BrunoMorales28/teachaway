@@ -17,6 +17,7 @@ export const getImages = (section = CONSTANTS.SECTIONS.TOP, showViral = true, so
       const imgurImages = imgurGalleries.map((gallery) => ({
         ...gallery,
         link: gallery.images?.[0]?.link ?? "",
+        description: gallery.images?.[0]?.description ?? ""
       }));
       return imgurImages;
     });

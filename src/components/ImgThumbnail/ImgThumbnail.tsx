@@ -10,23 +10,28 @@ interface thumbnailProps {
   description: string;
 }
 
+
+//  <img src={link || CONSTANTS.DEFAULT_IMG} alt="" referrerPolicy="no-referrer" />
 const ImgThumbnail = ({ title, description, link }: thumbnailProps) => {
   console.log(description)
-  return (
-    <ImageListItem>
-       <Box p={2} bgcolor="secondary.light">
-        <Typography align="center" variant="body1">
+  if (!link.match((/(\.ogg)|(\.mp4)|(\.webm)/))) return (
+    <ImageListItem >
+      <Box p={2} bgcolor="secondary.light">
+        <Typography align="center" variant="h2">
           {title}
         </Typography>
       </Box>
-      <img src={link || CONSTANTS.DEFAULT_IMG} alt="" referrerPolicy="no-referrer" />
-      {description && <Box p={2} bgcolor="secondary.main">
-        <Typography variant="subtitle1">
-          {description}
-        </Typography>
-      </Box>}
+      <img src={link} alt="image unavailable" />
+      {description && 
+        <Box p={2} bgcolor="secondary.main">
+          <Typography variant="subtitle1">
+            {description}
+          </Typography>
+        </Box>
+      }
     </ImageListItem>
   );
+  return <div/>
 };
 
 export default ImgThumbnail;

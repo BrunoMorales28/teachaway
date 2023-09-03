@@ -14,7 +14,7 @@ interface panelButtonProps {
 }
 
 const PanelButton = ({ sectionName, currentSection, handleClick }: panelButtonProps) => (
-  <Button sx={{ bgcolor: "#424855", borderColor: "#000000" }} disabled={sectionName === currentSection} onClick={() => handleClick(sectionName)}>
+  <Button sx={{ bgcolor: sectionName !== currentSection ? "primary.main" : "primary.dark", borderColor: "#000000" }} onClick={() => handleClick(sectionName)}>
     <Typography color="white"> {sectionName} </Typography>
   </Button>
 );

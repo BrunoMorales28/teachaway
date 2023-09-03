@@ -14,12 +14,12 @@ function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme} >
-        <Box sx={{ bgcolor: "primary.dark" }}>
-          <Container >
+        <Box sx={{ bgcolor: "primary.main" }}>
+          <Container sx={{bgcolor:"secondary.main"}}>
             <Box height="100vh" display="flex" flexDirection="column" justifyContent="space-around">
               <img src="https://www.teachaway.com/themes/contrib/tams/logo.svg" alt="logo" />
-              <Typography align="center">Bruno Morales' Coding Challenge</Typography>
-              <Typography align="center">Frontend - Image gallery with filters</Typography>
+              <Typography align="center" variant="h1" color="primary.dark">Bruno Morales' Coding Challenge</Typography>
+              <Typography align="center"  variant="body1" color="primary.dark">Frontend - Image gallery with filters</Typography>
             </Box>
             <SectionPanel />
             <ImgGrid />

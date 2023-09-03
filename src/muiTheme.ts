@@ -5,21 +5,23 @@ let theme = createTheme({
     palette: {
         primary: {
             main: "#68c441",
-            dark: "#218477"
+            dark: "#218477",
+            contrastText: "#000"
         },
         secondary: {
             main: "#282c34",
-            light: "#424855"
+            light: "#424855",
+            contrastText: "#fff"
         },
     },
     typography: {
         h1: {
-            fontSize: "1.5rem",
+            fontSize: "2rem",
             fontWeight: 800,
             color: "#fff"
         },
         h2: {
-            fontSize: "1.25rem",
+            fontSize: "1.5rem",
             fontWeight: 800,
             color: "#fff"
         },
@@ -64,12 +66,12 @@ theme=createTheme(theme, {
         MuiImageList: {
             styleOverrides: {
                 root: {
-                    backgroundColor: theme.palette.primary.main,
+                    backgroundColor: theme.palette.primary.dark,
                     padding: "1rem",
                     borderRadius: "0.5rem"
                 },
             },
-        }
+        },
     }
 })
 
