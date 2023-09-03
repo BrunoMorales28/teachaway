@@ -16,7 +16,7 @@ function App() {
       <ThemeProvider theme={theme} >
         <Box sx={{ bgcolor: "primary.main" }}>
           <Container sx={{bgcolor:"secondary.main"}}>
-            <Box height="100vh" display="flex" flexDirection="column" justifyContent="space-around">
+            <Box height="100vh" px="1rem" display="flex" flexDirection="column" justifyContent="space-around">
               <img src="https://www.teachaway.com/themes/contrib/tams/logo.svg" alt="logo" />
               <Typography align="center" variant="h1" color="primary.dark">Bruno Morales' Coding Challenge</Typography>
               <Typography align="center"  variant="body1" color="primary.dark">Frontend - Image gallery with filters</Typography>

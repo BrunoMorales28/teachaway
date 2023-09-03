@@ -19,7 +19,9 @@ export type imgurGallery = {
   link: string;
 };
 
+export type gallerySection = "hot" | "top" | "user";
+
 export interface reduxState {
-  currentSection: string;
+  currentSection: gallerySection;
   showViral: boolean;
 }

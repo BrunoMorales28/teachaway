@@ -13,7 +13,6 @@ interface thumbnailProps {
 
 //  <img src={link || CONSTANTS.DEFAULT_IMG} alt="" referrerPolicy="no-referrer" />
 const ImgThumbnail = ({ title, description, link }: thumbnailProps) => {
-  console.log(description)
   if (!link.match((/(\.ogg)|(\.mp4)|(\.webm)/))) return (
     <ImageListItem >
       <Box p={2} bgcolor="secondary.light">
@@ -21,7 +20,7 @@ const ImgThumbnail = ({ title, description, link }: thumbnailProps) => {
           {title}
         </Typography>
       </Box>
-      <img src={link} alt="image unavailable" />
+      <img referrerPolicy="no-referrer" src={link} alt="image unavailable" />
       {description && 
         <Box p={2} bgcolor="secondary.main">
           <Typography variant="subtitle1">

@@ -4,41 +4,41 @@ import { Box, Button, ButtonGroup, Switch, Typography } from "@mui/material";
 import CONSTANTS from "../../constants";
 import actions from "./actions";
 import { selectSection, selectShowViral } from "../../redux/selectors";
-
-type gallerySection = "hot" | "top" | "user";
+import { gallerySection } from "../../types";
 
 interface panelButtonProps {
   sectionName: gallerySection;
-  currentSection: gallerySection;
-  handleClick: (sectionName: gallerySection) => void;
 }
 
-const PanelButton = ({ sectionName, currentSection, handleClick }: panelButtonProps) => (
-  <Button sx={{ bgcolor: sectionName !== currentSection ? "primary.main" : "primary.dark", borderColor: "#000000" }} onClick={() => handleClick(sectionName)}>
+const PanelButton = ({ sectionName }: panelButtonProps) => {
+  const dispatch = useDispatch();
+  const currentSection = useSelector(selectSection) ;
+
+  const handleClick = (value: gallerySection) => {
+    dispatch({ type: actions.setCurrentSection, payload: value });
+  };
+  return (
+  <Button sx={{ bgcolor: sectionName !== currentSection ? "primary.main" : "primary.dark", py: 1 }} onClick={() => handleClick(sectionName)}>
     <Typography color="white"> {sectionName} </Typography>
   </Button>
-);
+)};
 
 const SectionPanel = () => {
   const { TOP, HOT, USER } = CONSTANTS.SECTIONS as { TOP: gallerySection; HOT: gallerySection; USER: gallerySection };
-  const currentSection = useSelector(selectSection) as gallerySection;
-  const showViral = useSelector(selectShowViral);
   const dispatch = useDispatch();
+  const showViral = useSelector(selectShowViral);
 
   const toggleShowViral = (e: any) => {
     dispatch({ type: actions.toggleShowViral, payload: e.target.value });
   };
 
-  const handleClick = (value: gallerySection) => {
-    dispatch({ type: actions.setCurrentSection, payload: value });
-  };
 
   return (
     <Box display="flex" justifyContent="space-around">
-      <ButtonGroup variant="contained">
-        <PanelButton currentSection={currentSection} sectionName={HOT} handleClick={handleClick} />
-        <PanelButton currentSection={currentSection} sectionName={TOP} handleClick={handleClick} />
-        <PanelButton currentSection={currentSection} sectionName={USER} handleClick={handleClick} />
+      <ButtonGroup  variant="contained">
+        <PanelButton sectionName={HOT} />
+        <PanelButton sectionName={TOP} />
+        <PanelButton sectionName={USER} />
       </ButtonGroup>
       <Box display="flex" justifyContent="center" flexDirection="column">
         <Typography align="center">show viral</Typography>

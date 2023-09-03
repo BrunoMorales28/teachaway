@@ -8,15 +8,18 @@ const InstructionsSection = () => (
       <ListItem>
         <Checkbox checked />
         <Typography variant="subtitle1"> consume the Imgur API: https://api.imgur.com/ (check documentation for the api https://apidocs.imgur.com)
-        </Typography> </ListItem>
+        </Typography> 
+        </ListItem>
       <ListItem>
         <Checkbox checked />
         <Typography variant="subtitle1">show gallery images in a grid of thumbnails;
-        </Typography></ListItem>
+        </Typography>
+        </ListItem>
       <ListItem>
         <Checkbox checked />
         <Typography variant="subtitle1">show image description in the thumbnail, top or bottom;
-        </Typography></ListItem>
+        </Typography>
+        </ListItem>
       <ListItem>
         <Checkbox checked />
         <Typography variant="subtitle1">allow selecting the gallery section: hot, top, user;
