@@ -11,17 +11,20 @@ interface thumbnailProps {
 }
 
 const ImgThumbnail = ({ title, description, link }: thumbnailProps) => {
+  console.log(description)
   return (
     <ImageListItem>
-      <img src={link || CONSTANTS.DEFAULT_IMG} alt="" referrerPolicy="no-referrer" />
-      <Box p={2}>
-        <Typography align="center" color="white" sx={{ fontWeight: "bold" }}>
+       <Box p={2} bgcolor="secondary.light">
+        <Typography align="center" variant="body1">
           {title}
         </Typography>
-        <Typography color="white" variant="subtitle1">
+      </Box>
+      <img src={link || CONSTANTS.DEFAULT_IMG} alt="" referrerPolicy="no-referrer" />
+      {description && <Box p={2} bgcolor="secondary.main">
+        <Typography variant="subtitle1">
           {description}
         </Typography>
-      </Box>
+      </Box>}
     </ImageListItem>
   );
 };

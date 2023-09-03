@@ -17,9 +17,9 @@ const ImgGrid = () => {
   }, [currentSection, showViral]);
 
   return (
-    <ImageList sx={{ bgcolor: "#282c34", p: 1 }} cols={1} gap={8}>
+    <ImageList cols={1} gap={8}>
       {images.map((img: imgurGallery) => (
-        <Card key={img.id} sx={{ bgcolor: "#424855" }}>
+        <Card key={img.id}>
           <ImgThumbnail link={img.link} title={img.title} description={img.description} />
         </Card>
       ))}
