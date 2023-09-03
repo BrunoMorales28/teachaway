@@ -12,8 +12,7 @@ interface thumbnailProps {
 
 
 //  <img src={link || CONSTANTS.DEFAULT_IMG} alt="" referrerPolicy="no-referrer" />
-const ImgThumbnail = ({ title, description, link }: thumbnailProps) => {
-  if (!link.match((/(\.ogg)|(\.mp4)|(\.webm)/))) return (
+const ImgThumbnail = ({ title, description, link }: thumbnailProps) =>(
     <ImageListItem >
       <Box p={2} bgcolor="secondary.light">
         <Typography align="center" variant="h2">
@@ -29,8 +28,6 @@ const ImgThumbnail = ({ title, description, link }: thumbnailProps) => {
         </Box>
       }
     </ImageListItem>
-  );
-  return <div/>
-};
+)
 
 export default ImgThumbnail;
