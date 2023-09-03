@@ -31,9 +31,8 @@ const ImgGrid = () => {
       {images.map(
           (img: imgurGallery) => {
           const { id, link, title, description } = img
-          if (!link.match((/(\.ogg)|(\.mp4)|(\.webm)/)))   
-          return (
-          <Card key={id}>
+          if (!link.match((/(\.ogg)|(\.mp4)|(\.webm)/))) return (
+          <Card sx={{p: 1}} key={id}>
             <ImgThumbnail link={link} title={title} description={description} />
           </Card>
         )}

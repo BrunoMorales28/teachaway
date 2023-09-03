@@ -14,7 +14,7 @@ function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme} >
-        <Box sx={{ bgcolor: "primary.main" }}>
+        <Box bgcolor="primary.main">
           <Container sx={{bgcolor:"secondary.main"}}>
             <Box height="100vh" px="1rem" display="flex" flexDirection="column" justifyContent="space-around">
               <img src="https://www.teachaway.com/themes/contrib/tams/logo.svg" alt="logo" />

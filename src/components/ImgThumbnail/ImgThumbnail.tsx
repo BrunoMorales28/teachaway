@@ -13,20 +13,20 @@ interface thumbnailProps {
 
 //  <img src={link || CONSTANTS.DEFAULT_IMG} alt="" referrerPolicy="no-referrer" />
 const ImgThumbnail = ({ title, description, link }: thumbnailProps) =>(
-    <ImageListItem >
-      <Box p={2} bgcolor="secondary.light">
-        <Typography align="center" variant="h2">
-          {title}
-        </Typography>
-      </Box>
-      <img referrerPolicy="no-referrer" src={link} alt="image unavailable" />
-      {description && 
-        <Box p={2} bgcolor="secondary.main">
-          <Typography variant="subtitle1">
-            {description}
+    <ImageListItem  >
+        <Box p={2} bgcolor="secondary.light">
+          <Typography align="center" variant="h2">
+            {title}
           </Typography>
         </Box>
-      }
+        <img style={{objectFit: "contain"}} referrerPolicy="no-referrer" src={link} alt="image unavailable" />
+        {description && 
+          <Box p={2} bgcolor="secondary.main">
+            <Typography variant="subtitle1">
+              {description}
+            </Typography>
+          </Box>
+        }
     </ImageListItem>
 )
 

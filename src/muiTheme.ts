@@ -30,7 +30,7 @@ let theme = createTheme({
             color: "#fff"
         },
         subtitle1: {
-            fontSize: "0.75rem",
+            fontSize: "1.25rem",
             color: "#fff"
         },  
     },
@@ -72,6 +72,28 @@ theme=createTheme(theme, {
                 },
             },
         },
+        MuiImageListItem: {
+            styleOverrides: {
+                root: {
+                    display: "flex", 
+                    flexDirection: "column" ,
+                    justifyContent: "space-between" ,
+                    minHeight:"100%" ,
+                    backgroundColor: theme.palette.secondary.light,
+                },
+            },
+        },
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    display: "flex",
+                    flexDirection: "column" ,
+                    alignContent: "space-between" ,
+                    backgroundColor: theme.palette.primary.main , 
+                    borderRadius: 4
+                },
+            },
+        }
     }
 })
 
