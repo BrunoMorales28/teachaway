@@ -1,4 +1,4 @@
-import { Container, Box, List, ListItem, Typography, Checkbox } from "@mui/material";
+import { Box, List, ListItem, Typography, Checkbox } from "@mui/material";
 
 const InstructionsSection = () => (
   <Box>

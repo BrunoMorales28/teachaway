@@ -8,6 +8,7 @@ import { getImages } from "../../apis/getImages";
 import ImgThumbnail from "../ImgThumbnail";
 import { imgurGallery } from "../../types";
 import { selectSection, selectShowViral } from "../../redux/selectors";
+import { Link } from "react-router-dom";
 
 const ImgGrid = () => {
   const [images, setImages] = useState<imgurGallery[]>([]);
@@ -30,12 +31,16 @@ const ImgGrid = () => {
     <ImageList  cols={imageListColumns()} gap={8}>
       {images.map(
           (img: imgurGallery) => {
-          const { id, link, title, description } = img
+          const {id, link, title, description } = img
+
           if (!link.match((/(\.ogg)|(\.mp4)|(\.webm)/))) return (
-          <Card sx={{p: 1}} key={id}>
-            <ImgThumbnail link={link} title={title} description={description} />
-          </Card>
-        )}
+            <Link to={`image/${id}`} key={id} style={{ textDecoration: 'none' }}>
+              <Card sx={{p: 1}} >
+                <ImgThumbnail link={link} title={title} description={description} />
+              </Card>
+            </Link>
+          )
+        }
       )}
     </ImageList>
   );

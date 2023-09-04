@@ -59,7 +59,7 @@ theme=createTheme(theme, {
             },
             styleOverrides: {
                 root: {
-                    color: "#fff"
+                    color: "#fff",
                 },
             },
         },
@@ -93,7 +93,7 @@ theme=createTheme(theme, {
                     borderRadius: 4
                 },
             },
-        }
+        },
     }
 })
 

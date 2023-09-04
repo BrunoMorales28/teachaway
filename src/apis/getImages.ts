@@ -1,5 +1,5 @@
 import CONSTANTS from "../constants";
-import { imgurResponseInterface, imgurGallery } from "../types";
+import { imgurResponseInterface, imgurGallery, imgDetails, imgDetailsResponseInterface } from "../types";
 
 const options = {
   headers: {
@@ -20,5 +20,17 @@ export const getImages = (section = CONSTANTS.SECTIONS.TOP, showViral = true, so
         description: gallery.images?.[0]?.description ?? ""
       }));
       return imgurImages;
+    });
+};
+
+export const getImageDetails = (imageId: string) => {
+  const requestUrl = `${CONSTANTS.BASE_IMGUR_URL}/image/${imageId}`;
+
+  return fetch(requestUrl, options)
+    .then((res) =>res.json())
+    .then((res: imgDetailsResponseInterface): imgDetails => {
+      
+      const imgDetails = res.data;
+      return imgDetails;
     });
 };
