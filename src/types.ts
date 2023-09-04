@@ -1,16 +1,22 @@
 export interface imgurResponseInterface {
-  data: imgurGallery[];
+  data:  imgurGallery[];
+  status: number;
+  success: boolean;
+}
+
+export interface imgDetailsResponseInterface {
+  data: imgDetails;
   status: number;
   success: boolean;
 }
 
 export type imgurGallery = {
-  id: string;
+ id: string;
   description: string;
   title: string;
   images: [
     {
-      id: string;
+     id: string;
       description: string;
       title: string;
       link: string;
@@ -18,6 +24,16 @@ export type imgurGallery = {
   ];
   link: string;
 };
+
+export type imgDetails = {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  ups: number;
+  downs: number;
+  score: number;
+}
 
 export type gallerySection = "hot" | "top" | "user";
 

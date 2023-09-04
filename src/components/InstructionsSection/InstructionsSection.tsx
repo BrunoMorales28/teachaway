@@ -1,4 +1,4 @@
-import { Container, Box, List, ListItem, Typography, Checkbox } from "@mui/material";
+import { Box, List, ListItem, Typography, Checkbox } from "@mui/material";
 
 const InstructionsSection = () => (
   <Box>
@@ -33,7 +33,7 @@ const InstructionsSection = () => (
         <Typography variant="subtitle1"> allow specifying window and sort parameters;</Typography>
       </ListItem>
       <ListItem>
-        <Checkbox checked={false} />
+        <Checkbox />
         <Typography variant="subtitle1">when clicking an image in the gallery - show its details: big image, title, description, upvotes, downvotes and score.
         </Typography>   
       </ListItem>

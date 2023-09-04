@@ -2,16 +2,12 @@ import ImageListItem from "@mui/material/ImageListItem/ImageListItem";
 import Typography from "@mui/material/Typography/Typography";
 import Box from "@mui/material/Box";
 
-import CONSTANTS from "../../constants";
-
 interface thumbnailProps {
   link: string;
   title: string;
   description: string;
 }
 
-
-//  <img src={link || CONSTANTS.DEFAULT_IMG} alt="" referrerPolicy="no-referrer" />
 const ImgThumbnail = ({ title, description, link }: thumbnailProps) =>(
     <ImageListItem  >
         <Box p={2} bgcolor="secondary.light">
@@ -19,7 +15,7 @@ const ImgThumbnail = ({ title, description, link }: thumbnailProps) =>(
             {title}
           </Typography>
         </Box>
-        <img style={{objectFit: "contain"}} referrerPolicy="no-referrer" src={link} alt="image unavailable" />
+        <img style={{objectFit: "contain"}} referrerPolicy="no-referrer" src={link} alt="unavailable" />
         {description && 
           <Box p={2} bgcolor="secondary.main">
             <Typography variant="subtitle1">
