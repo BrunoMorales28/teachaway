@@ -32,6 +32,10 @@ let theme = createTheme({
         subtitle1: {
             fontSize: "1.25rem",
             color: "#fff"
+        },
+        subtitle2: {
+            fontSize: "0.75rem",
+            color: "#fff"
         },  
     },
     

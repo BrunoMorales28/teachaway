@@ -12,14 +12,17 @@ const ImageDetails = () => {
     console.log("ders", imageDetails)
     return ( 
     <Box bgcolor="primary.main">
-        <Container sx={{bgcolor:"secondary.main"}}>
-        <Box height="100vh" px="1rem" display="flex" flexDirection="column" justifyContent="space-around">
-            <Typography align="center" variant="h1" color="primary.main">{title}</Typography>
-            <img src={link} alt={title} />
-            <Typography align="center"  variant="body1" color="primary.dark">{description}</Typography>
-            <Typography variant="subtitle1">Upvotes: {ups} </Typography>
-            <Typography variant="subtitle1">Downvotes: {downs} </Typography>
-        <Typography variant="subtitle1">Total score: {score} </Typography>
+        <Container sx={{bgcolor:"secondary.main", paddingY: 4}}>
+        <Typography align="center" variant="h1" color="primary.main">{title ?? "Image has no title"}</Typography>
+        <img style={{maxWidth: "100%", marginBottom: 40, marginTop: 40}} src={link} alt={title} />
+        <Typography variant="body1">{description}</Typography>
+        <Box my={3}>
+            <Typography variant="body1">Upvotes: </Typography>
+            <Typography variant="subtitle2">{ups ?? "This image has not been upvoted yet."} </Typography>
+            <Typography variant="body1">Downvotes: </Typography>
+            <Typography variant="subtitle2">{downs ?? "This image has not been downvoted yet."} </Typography>
+            <Typography variant="body1">Total score: </Typography>
+            <Typography variant="subtitle2">{score ?? "This image has no score."} </Typography>
         </Box>
         <InstructionsSection />
         </Container>
