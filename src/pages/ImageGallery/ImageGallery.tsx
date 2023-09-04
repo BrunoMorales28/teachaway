@@ -4,7 +4,7 @@ import Box from "@mui/material/Box/Box";
 
 import ImgGrid from "./../../components/ImgGrid";
 import InstructionsSection from "./../../components/InstructionsSection";
-import SectionPanel from "./../../components/SectionPanel";
+import SectionPanel from "../../components/GalleryPanel";
 
 
 

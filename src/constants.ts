@@ -11,6 +11,13 @@ const CONSTANTS = {
     TOP: "top",
     TIME: "time",
   },
+  TIME_WINDOWS: {
+    ALL: "all",
+    DAY: "day",
+    WEEK: "week",
+    MONTH: "month",
+    YEAR: "year"
+  },
   DEFAULT_IMG: "https://s.imgur.com/images/404/giraffeweyes.png",
 };
 

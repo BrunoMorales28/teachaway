@@ -9,7 +9,6 @@ import { imgDetails } from "../../types";
 const ImageDetails = () => {
   const  imageDetails  = useLoaderData() as imgDetails;
   const { title, description, link, ups, downs, score} = imageDetails
-    console.log("ders", imageDetails)
     return ( 
     <Box bgcolor="primary.main">
         <Container sx={{bgcolor:"secondary.main", paddingY: 4}}>
