@@ -44,7 +44,8 @@ The full list of requirements as requested by Teachaway are the following: <br/>
 
 ### Main Issue
 
-The toughest challenge I face during the creation of this app was imgur's server configuration, which is restricted by CORS in a way which I found hard to diagnose and which required a workaround (For example, not being able to connect through localhost)
+The toughest challenge I face during the creation of this app was imgur's API server configuration, which is restricted by CORS in a way which I found hard to diagnose and which required a workaround (For example, not being able to connect through localhost).
+Additionally, I found imgur API response schemas somewhat misleading (Such as finding the correct ID for an image)
 
 #### Personal notes:
 
