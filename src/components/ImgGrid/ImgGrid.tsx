@@ -29,11 +29,16 @@ const ImgGrid = () => {
 
   return (
     <ImageList  cols={imageListColumns()} gap={8}>
-      {images.map(
+      {
+      images
+      .filter(
+        (img: imgurGallery) => 
+          !img.link.match((/(\.ogg)|(\.mp4)|(\.webm)/))
+      ).map(
           (img: imgurGallery) => {
           const {id, link, title, description } = img
 
-          if (!link.match((/(\.ogg)|(\.mp4)|(\.webm)/))) return (
+          return (
             <Link to={`image/${id}`} key={id} style={{ textDecoration: 'none' }}>
               <Card sx={{p: 1}} >
                 <ImgThumbnail link={link} title={title} description={description} />
