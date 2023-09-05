@@ -50,7 +50,7 @@ Additionally, I found imgur API response schemas somewhat misleading (Such as fi
 #### Personal notes:
 
 ● Although instructions specify sass, styled-components and css modules, it was mentioned during the interview Teachaway uses Material UI for the code. Thus, I included Material UI to the stack.  <br/>
-● Regrettably, during this week I did not find myself with as much time to work on this challenge as I hoped, and I was not able to include pagination; unit testing (with Enzyme and Jest) and routing (With React-router). These are important tasks I know how to code, but will not be displayed in this demo. <br/>
+● Regrettably, during this time I did not find myself with as much time to work on this challenge as I hoped, and I was not able to include pagination and unit testing (with Enzyme and Jest). These are important tasks I know how to code, but will not be displayed in this demo. <br/>
 
 Again, I want to thank you for your interest and the opportunity, and hope to work together soon! <br/>
 
