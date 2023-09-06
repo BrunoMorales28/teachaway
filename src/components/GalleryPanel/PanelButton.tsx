@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { gallerySection, gallerySort, galleryWindow } from "../../types";
 
@@ -22,7 +22,7 @@ const PanelButton = ({ buttonLabel, currentValue, action }: panelButtonProps) =>
       }}
       onClick={() => handleClick(buttonLabel)}
     >
-      <Typography> {buttonLabel} </Typography>
+      {buttonLabel}
     </Button>
   );
 };
