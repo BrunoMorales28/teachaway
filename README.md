@@ -45,12 +45,12 @@ The full list of requirements as requested by Teachaway are the following: <br/>
 ### Main Issue
 
 The toughest challenge I face during the creation of this app was imgur's API server configuration, which is restricted by CORS in a way which I found hard to diagnose and which required a workaround (For example, not being able to connect through localhost).
-Additionally, I found imgur API response schemas somewhat misleading (Such as finding the correct ID for an image)
+Additionally, I found imgur API response schemas and documentation somewhat misleading (Such as finding the correct ID for an image)
 
 #### Personal notes:
 
-● Although instructions specify sass, styled-components and css modules, it was mentioned during the interview Teachaway uses Material UI for the code. Thus, I included Material UI to the stack.  <br/>
-● Regrettably, during this time I did not find myself with as much time to work on this challenge as I hoped, and I was not able to include pagination and unit testing (with Enzyme and Jest). These are important tasks I know how to code, but will not be displayed in this demo. <br/>
+● Although instructions specify sass, styled-components and css modules, it was mentioned during the interview Teachaway uses Material UI for the code. Thus, I included Material UI to the stack. <br/>
+● Regrettably, during this time I did not find myself with as much time to work on this challenge as I hoped, faced unexpected time consuming problems, and I was not able to include pagination and unit testing (with Enzyme and Jest). These are important tasks I know how to code, but will not be displayed in this demo. <br/>
 
 Again, I want to thank you for your interest and the opportunity, and hope to work together soon! <br/>
 
