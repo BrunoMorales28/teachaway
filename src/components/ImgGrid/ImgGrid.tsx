@@ -20,7 +20,7 @@ const ImgGrid = () => {
 
   const imageListColumns = () => {
     if (isSmallScreen) return 1;
-    if (isBigScreen) return 4;
+    if (isBigScreen) return 3;
     return 2;
   };
 

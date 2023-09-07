@@ -11,13 +11,13 @@ const ImageDetails = () => {
   const { title, description, link, ups, downs, score } = imageDetails;
   return (
     <Box bgcolor="primary.main">
-      <Container sx={{ bgcolor: "secondary.main", paddingY: 4 }}>
-        <Typography align="center" variant="h1" color="primary.main">
+      <Container sx={{ bgcolor: "secondary.main", paddingY: 4, display: "flex", justifyContent: "center", flexDirection: "column" }}>
+        <Typography sx={{ marginY: 10 }} align="center" variant="h1" color="primary.main">
           {title ?? "Image has no title"}
         </Typography>
-        <img style={{ maxWidth: "100%", margin: "40px auto" }} src={link} alt={title} />
+        <img style={{ maxWidth: "100%" }} src={link} alt={title} />
         <Typography variant="body1">{description}</Typography>
-        <Box my={3}>
+        <Box my={10}>
           <Typography variant="body1">Upvotes: </Typography>
           <Typography variant="subtitle2">{ups ?? "This image has not been upvoted yet."} </Typography>
           <Typography variant="body1">Downvotes: </Typography>

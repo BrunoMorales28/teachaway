@@ -9,7 +9,7 @@ interface thumbnailProps {
 }
 
 const ImgThumbnail = ({ title, description, link }: thumbnailProps) => (
-  <ImageListItem>
+  <ImageListItem sx={{ maxHeight: 700 }}>
     <Box p={2} bgcolor="secondary.light">
       <Typography align="center" variant="h2">
         {title}
@@ -17,7 +17,7 @@ const ImgThumbnail = ({ title, description, link }: thumbnailProps) => (
     </Box>
     <img style={{ objectFit: "contain" }} referrerPolicy="no-referrer" src={link} alt="unavailable" />
     {description && (
-      <Box p={2} bgcolor="secondary.main">
+      <Box p={2} bgcolor="secondary.main" overflow="scroll">
         <Typography variant="subtitle1">{description}</Typography>
       </Box>
     )}
