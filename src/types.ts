@@ -37,7 +37,13 @@ export type imgDetails = {
 
 export type gallerySection = "hot" | "top" | "user";
 
+export type galleryWindow = "day" | "week" | "month" | "year" | "all"
+
+export type gallerySort = "viral" | "top" | "time"
+
 export interface reduxState {
   currentSection: gallerySection;
+  currentWindow: galleryWindow;
+  sortedBy: gallerySort;
   showViral: boolean;
 }
