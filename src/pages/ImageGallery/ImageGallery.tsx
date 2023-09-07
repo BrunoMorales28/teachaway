@@ -5,12 +5,13 @@ import Box from "@mui/material/Box/Box";
 import ImgGrid from "./../../components/ImgGrid";
 import InstructionsSection from "./../../components/InstructionsSection";
 import GalleryPanel from "../../components/GalleryPanel";
+import CONSTANTS from "../../constants";
 
 const ImageGallery = () => (
   <Box bgcolor="primary.main">
     <Container sx={{ bgcolor: "secondary.main" }}>
       <Box height="100vh" px="1rem" display="flex" flexDirection="column" justifyContent="space-around">
-        <img src="https://www.teachaway.com/themes/contrib/tams/logo.svg" alt="logo" />
+        <img src={CONSTANTS.TEACHAWAY_LOGO} alt="logo" />
         <Typography align="center" variant="h1" color="primary.dark">
           Bruno Morales' Coding Challenge
         </Typography>

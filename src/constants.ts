@@ -1,6 +1,7 @@
 const CONSTANTS = {
   BASE_IMGUR_URL: "https://api.imgur.com/3",
   CLIENT_ID: "9b3332c053523e2",
+  TEACHAWAY_LOGO: "https://www.teachaway.com/themes/contrib/tams/logo.svg",
   SECTIONS: {
     HOT: "hot",
     TOP: "top",
@@ -16,7 +17,7 @@ const CONSTANTS = {
     DAY: "day",
     WEEK: "week",
     MONTH: "month",
-    YEAR: "year"
+    YEAR: "year",
   },
   DEFAULT_IMG: "https://s.imgur.com/images/404/giraffeweyes.png",
 };

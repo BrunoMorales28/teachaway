@@ -48,6 +48,18 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: theme.palette.secondary.light,
+          borderBottom: `2px solid ${theme.palette.secondary.dark}`,
+          height: 80,
+          padding: 40,
+          alignItems: "flex-start",
+          justifyContent: "center",
+        },
+      },
+    },
     MuiTypography: {
       defaultProps: {
         variantMapping: {
