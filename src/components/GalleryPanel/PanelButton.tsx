@@ -18,7 +18,6 @@ const PanelButton = ({ buttonLabel, currentValue, action }: panelButtonProps) =>
     <Button
       sx={{
         bgcolor: buttonLabel !== currentValue ? "primary.main" : "primary.dark",
-        py: 1,
       }}
       onClick={() => handleClick(buttonLabel)}
     >

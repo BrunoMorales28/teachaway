@@ -1,5 +1,4 @@
 import { ButtonGroup } from "@mui/material";
-import { styled } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 
 import CONSTANTS from "../../constants";
@@ -15,13 +14,13 @@ const SortingPanel = () => {
     TIME: gallerySort;
   };
   const currentValue = useSelector(selectSorting) as gallerySort;
-  const { setTimeWindow } = actions;
+  const { sort } = actions;
 
   return (
     <ButtonGroup variant="contained">
-      <PanelButton currentValue={currentValue} action={setTimeWindow} buttonLabel={VIRAL} />
-      <PanelButton currentValue={currentValue} action={setTimeWindow} buttonLabel={TOP} />
-      <PanelButton currentValue={currentValue} action={setTimeWindow} buttonLabel={TIME} />
+      <PanelButton currentValue={currentValue} action={sort} buttonLabel={VIRAL} />
+      <PanelButton currentValue={currentValue} action={sort} buttonLabel={TOP} />
+      <PanelButton currentValue={currentValue} action={sort} buttonLabel={TIME} />
     </ButtonGroup>
   );
 };

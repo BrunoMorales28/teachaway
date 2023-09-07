@@ -61,6 +61,7 @@ theme = createTheme(theme, {
       },
       styleOverrides: {
         root: {
+          overflowWrap: "break-word",
           color: "#fff",
         },
       },
@@ -91,7 +92,7 @@ theme = createTheme(theme, {
           display: "flex",
           flexDirection: "column",
           alignContent: "space-between",
-          backgroundColor: theme.palette.primary.main,
+          backgroundColor: theme.palette.secondary.main,
           borderRadius: 4,
         },
       },
@@ -101,9 +102,15 @@ theme = createTheme(theme, {
         {
           props: { variant: "contained" },
           style: {
-            border: 0,
             "& .MuiButtonGroup-grouped": {
+              border: 0,
+              padding: 12,
               flexGrow: 1,
+
+              "&:hover": {
+                backgroundColor: theme.palette.primary.dark,
+                border: `1px solid ${theme.palette.secondary.main}`,
+              },
             },
             "& .MuiButtonGroup-grouped:not(:last-of-type)": {
               border: 0,

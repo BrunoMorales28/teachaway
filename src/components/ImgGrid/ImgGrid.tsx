@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { Card, ImageList, useMediaQuery } from "@mui/material";
 import { Theme } from "@mui/material/styles";
 
-
 import { getImages } from "../../apis/getImages";
 import ImgThumbnail from "../ImgThumbnail";
 import { imgurGallery } from "../../types";
@@ -18,35 +17,30 @@ const ImgGrid = () => {
   const isBigScreen = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
 
   const imageListColumns = () => {
-    if (isSmallScreen) return 1
-    if (isBigScreen) return 4
-    return 2
-  }
+    if (isSmallScreen) return 1;
+    if (isBigScreen) return 4;
+    return 2;
+  };
 
   useEffect(() => {
     getImages(currentSection, showViral).then((imgs) => setImages(imgs));
   }, [currentSection, showViral]);
 
   return (
-    <ImageList  cols={imageListColumns()} gap={8}>
-      {
-      images
-      .filter(
-        (img: imgurGallery) => 
-          !img.link.match((/(\.ogg)|(\.mp4)|(\.webm)/))
-      ).map(
-          (img: imgurGallery) => {
-          const {id, link, title, description } = img
+    <ImageList cols={imageListColumns()} gap={8}>
+      {images
+        .filter((img: imgurGallery) => !img.link.match(/(\.ogg)|(\.mp4)|(\.webm)/))
+        .map((img: imgurGallery) => {
+          const { id, link, title, description } = img;
 
           return (
-            <Link to={`image/${id}`} key={id} style={{ textDecoration: 'none' }}>
-              <Card sx={{p: 1}} >
+            <Card key={id} sx={{ p: 1 }}>
+              <Link to={`image/${id}`} style={{ textDecoration: "none" }}>
                 <ImgThumbnail link={link} title={title} description={description} />
-              </Card>
-            </Link>
-          )
-        }
-      )}
+              </Link>
+            </Card>
+          );
+        })}
     </ImageList>
   );
 };

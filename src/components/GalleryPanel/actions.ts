@@ -1,7 +1,7 @@
-const actions = { 
-    setCurrentSection: "search/setSection", 
-    toggleShowViral: "search/toggleShowViral",
-    setTimeWindow: "search/setWindow",
-    sort: "search/sort"
+const actions = {
+  setCurrentSection: "search/setSection",
+  setTimeWindow: "search/setWindow",
+  toggleShowViral: "search/toggleShowViral",
+  sort: "search/sort",
 };
 export default actions;
